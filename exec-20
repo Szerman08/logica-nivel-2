@@ -1,0 +1,7 @@
+
+salario = float(input("Qual seu salario mensal ? \n"))
+horas_trabalhadas = float(input("Quantas horas mensais você trabalha ? \n"))
+    
+valor_hora = salario / horas_trabalhadas
+
+print ("O valor por hora é :", valor_hora)
