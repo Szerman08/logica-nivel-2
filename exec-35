@@ -1,0 +1,20 @@
+# Preços por litro
+preco_gasolina = 3.30
+preco_alcool = 2.90
+
+# Entrada de dados
+litros = float(input("Digite o número de litros vendidos: "))
+tipo = input("Digite o tipo de combustível (A - Álcool, G - Gasolina): ").upper()
+
+# Cálculo do valor a pagar
+if tipo == 'A':
+    valor_total = litros * preco_alcool
+elif tipo == 'G':
+    valor_total = litros * preco_gasolina
+else:
+    print("Tipo de combustível inválido.")
+    valor_total = None
+
+# Saída
+if valor_total is not None:
+    print(f"Valor a ser pago: R$ {valor_total:.2f}")
