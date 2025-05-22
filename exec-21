@@ -1,0 +1,17 @@
+# Entradas
+horas_trabalhadas = float(input("Digite o número de horas trabalhadas no mês: "))
+salario_por_hora = float(input("Digite o salário por hora: "))
+
+# Constante de horas regulares por mês (4 semanas * 40 horas)
+horas_regulares = 160
+
+if horas_trabalhadas <= horas_regulares:
+    salario_total = horas_trabalhadas * salario_por_hora
+else:
+    horas_extras = horas_trabalhadas - horas_regulares
+    salario_regular = horas_regulares * salario_por_hora
+    salario_extra = horas_extras * salario_por_hora * 1.5
+    salario_total = salario_regular + salario_extra
+
+# Resultado
+print(f"O salário total do funcionário é R$ {salario_total:.2f}")
