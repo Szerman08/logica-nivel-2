@@ -1,0 +1,12 @@
+conta = int(input("Digite o numero da sua conta: (quatro digitos)\n"))
+saldo = int(input("Digite o saldo da sua conta: \n"))
+debito = float(input("Digite o total de débitos na sua conta: \n"))
+credito = float(input("Digite o total de créditos na sua conta: \n"))
+saldo_atual = saldo - debito + credito
+
+print("Seu saldo é: ", saldo_atual)
+
+if saldo_atual < 0:
+    print("Saldo Negativo")
+else:
+    print("Saldo positivo")
