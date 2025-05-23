@@ -1,0 +1,42 @@
+while True:
+    
+# Idades
+    homem1 = int(input("Digite a idade do 1° homem: \n"))
+    homem2 = int(input("Digite a idade do 2° homem: \n"))
+    mulher1 = int(input("Digite a idade da 1° mulher: \n"))
+    mulher2 = int(input("Digite a idade da 2° mulher: \n"))
+
+# Verifica se os dois homens têm idades diferentes
+    homens_diferentes = homem1 != homem2
+    # Verifica se as duas mulheres têm idades diferentes
+    mulheres_diferentes = mulher1 != mulher2
+
+    if not homens_diferentes or not mulheres_diferentes:
+        print("Erro: Homens e mulheres devem ter idades diferentes entre si. Tente novamente.\n")
+    else:
+        break
+    
+# Determinando homem mais velho e mais novo
+if homem1 > homem2:
+    homem_mais_velho = homem1
+    homem_mais_novo = homem2
+else:
+    homem_mais_velho = homem2
+    homem_mais_novo = homem1
+
+# Determinando mulher mais velha e mais nova
+if mulher1 > mulher2:
+    mulher_mais_velha = mulher1
+    mulher_mais_nova = mulher2
+else:
+    mulher_mais_velha = mulher2
+    mulher_mais_nova = mulher1
+    
+    
+# Cálculos
+soma1 = homem_mais_velho + mulher_mais_nova
+soma2 = homem_mais_novo + mulher_mais_velha
+
+# Saída
+print("Soma do homem mais velho com a mulher mais nova: \n", soma1)
+print("Soma do homem mais novo com a mulher mais velha: \n", soma2)
